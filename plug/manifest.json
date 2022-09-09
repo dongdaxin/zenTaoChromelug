@@ -1,0 +1,22 @@
+{
+  "name": "禅",
+  "description": "chrome 插件",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://172.16.175.90:18080/zentao/my/"],
+      "js": ["zentao.js"]
+    }
+  ]
+}
